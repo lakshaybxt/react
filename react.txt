@@ -1,0 +1,2 @@
+React is an external library that helps us create website easier
+babel - translates JSX to JavaScript
