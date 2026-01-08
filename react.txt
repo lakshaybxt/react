@@ -2,3 +2,5 @@ React is an external library that helps us create website easier
 React let us put our website into smaller piece
 babel - translates JSX to JavaScript
 Component -  A piece of website
+props = properties
+props make our component reusable
