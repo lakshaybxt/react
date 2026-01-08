@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [-z "$*"]; then
+if [ -z "$*" ]; then
   echo "❌ Please provide a commit message"
   echo "Usage: ./git.sh \"your commit message\""
   exit 1
