@@ -58,7 +58,7 @@
 				);
 			}
 
-			function App() {
+			function ChatMessages() {
 				const chatMessages = [{
 					message: 'hello chatbot',
 					sender: 'user',
@@ -87,14 +87,27 @@
 							sender={chatMessage.sender}
 							//
 							key={chatMessage.id} 
-						/>
+ 						/>
 					);
 				})
+
+				return(
+					<>
+						{chatMessageComponents}
+					</>	
+				);
+
+				
+			}
+
+			function App() {
+				
+				
 
 			return(
 					<>
 						<ChatInput/>
-						{chatMessageComponents}
+						<ChatMessages/> 
 					</>	
 				);
 			}
