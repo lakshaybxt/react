@@ -4,3 +4,4 @@ babel - translates JSX to JavaScript
 Component -  A piece of website
 props = properties
 props make our component reusable
+state = save data that changes over time
