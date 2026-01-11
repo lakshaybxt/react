@@ -5,3 +5,5 @@ Component -  A piece of website
 props = properties
 props make our component reusable
 state = save data that changes over time
+React exists to keep UI in sync with data
+useState is a React function that stores a value and gives you a function to update it AND re-render the UI.
