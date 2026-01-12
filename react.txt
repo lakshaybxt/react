@@ -6,7 +6,7 @@ props = properties
 props make our component reusable
 state = save data that changes over time
 React exists to keep UI in sync with data
-useState() = useStateis a React function that stores a value and gives you a function to update it AND re-render the UI.
+useState() = useState is a React function that stores a value and gives you a function to update it AND re-render the UI.
 Hooks = insert React features into our components
 state = automatically updates the HTML when the data changes
 Before Hooks, you had to use class components to:
@@ -15,3 +15,5 @@ store state
 respond to lifecycle events
 Hooks let you do all of this in simpler function components.
 useEffect() = run some code after the component is created or updated
+useRef() = automatically save an HTML element from the component
+ref = container with special React features
