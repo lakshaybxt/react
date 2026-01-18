@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
-import { ChatMessage } from "./ChatMessage";
+import { useRef, useEffect } from 'react'
+import ChatMessage from './ChatMessage';
 import './ChatMessages.css'
+
 
 function useAutoScroll(dependencies) {
   const containerRef  = useRef(null);
@@ -11,7 +12,6 @@ function useAutoScroll(dependencies) {
       // make the container down to bottom
       containerElem.scrollTop = containerElem.scrollHeight;
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 
   return containerRef;
