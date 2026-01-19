@@ -17,3 +17,8 @@ Hooks let you do all of this in simpler function components.
 useEffect() = run some code after the component is created or updated
 useRef() = automatically save an HTML element from the component
 ref = container with special React features
+
+How npm run dev work?
+npm run  = tells the compouter to look inside package.json for a secton called
+"scripts"
+dev = look inside "scripts" for "dev" and the run the command on the right side
