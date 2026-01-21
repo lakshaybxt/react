@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router'
 import { useState } from 'react'
 import HomePage from './pages/HomePage'
+import CheckoutPage from './pages/CheckoutPage'
 import './App.css'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <>
       <Routes>
         <Route index element={<HomePage/>}/>
-        <Route path="/checkout" element={<HomePage/>}></Route>
+        <Route path="/checkout" element={<CheckoutPage/>}></Route>
         <Route path="/health" element={<p>200OK</p>}></Route>
       </Routes>
       
