@@ -7,9 +7,9 @@ import './App.css'
 
 function App() {
   
-  const array = useState([]);
+  // const array = useState([]);
 
-  const [chatMessages, setChatMessages] = array;
+  const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('message')) || []);
 
   useEffect(() => {
     
