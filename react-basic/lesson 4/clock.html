@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <div class="js-container"></div>
+
+    <script>console.log("Hi");</script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/dayjs/dayjs.min.js"></script>
+		<script type="text/babel">
+			
+      function App() {
+        const [time, setTime] = React.useState(
+          dayjs().format('HH:mm:ss')
+        );
+
+        React.useEffect(() => {
+          setInterval(() => {
+            setTime(dayjs().format('HH:mm:ss'));
+            console.log('run code')
+          }, 1000)
+        }, []);
+
+        return (
+          <p>Current time: {time}</p>
+        );
+      }
+
+      const container = document.querySelector('.js-container');
+    // ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+      const root = ReactDOM.createRoot(container);
+			root.render(<App/>)
+
+    </script>
+  </body>
+</html>
