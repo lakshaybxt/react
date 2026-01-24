@@ -1,6 +1,6 @@
-import Header from '../components/Header';
+import Header from '../../components/Header';
 import './TrackingPage.css'
-import './general.css'
+import '../styles/general.css'
 
 function TrackingPage() {
   return(

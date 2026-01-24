@@ -1,6 +1,5 @@
-import Header from '../components/Header';
+import Header from '../../components/Header';
 import './HomePage.css'
-import './header.css'
 
 function HomePage() {
 	return(

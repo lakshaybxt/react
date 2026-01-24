@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router'
 import { useState } from 'react'
-import HomePage from './pages/HomePage'
-import CheckoutPage from './pages/CheckoutPage'
-import OrderPage from './pages/OrderPage'
-import TrackingPage from './pages/TrackingPage'
+import HomePage from './pages/home/HomePage'
+import CheckoutPage from './pages/checkout/CheckoutPage'
+import OrderPage from './pages/order/OrderPage'
+import TrackingPage from './pages/tracking/TrackingPage'
 import './App.css'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       </Routes>
       
     </>
-  )
+  );
 }
 
 export default App
