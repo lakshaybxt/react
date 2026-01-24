@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 if [ -z "$*" ]; then
   echo "❌ Please provide a commit message"
