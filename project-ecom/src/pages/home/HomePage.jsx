@@ -5,6 +5,8 @@ function HomePage() {
 	return(
 		<>		
 			<title>Home</title>
+      <link rel="icon" type="image/svg+xml" href="images/home-favicon.png" />
+
 			<Header/>
 
 			<div className="home-page">
