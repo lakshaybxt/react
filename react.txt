@@ -26,3 +26,10 @@ Routing = create multiple pages in react
 Single Page Application (SPA)
 = we only have 1 HTML file
 = we use React to create multiple pages
+
+fetch('http://localhost:3000/api/products')
+    .then((response) => {
+      response.json().then((data) => {
+        console.log(data)
+      })
+  })
