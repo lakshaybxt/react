@@ -49,7 +49,7 @@ function HomePage({ cart }) {
                 </div>
 
                 <div className="product-price">
-                 {formatMoney(product.price)}
+                 {formatMoney(product.priceCents)}
                 </div>
 
                 <div className="product-quantity-container">
