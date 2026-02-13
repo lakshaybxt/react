@@ -5,18 +5,21 @@ import ProductGrid from "./ProdutsGrid";
 import "./HomePage.css";
 
 function HomePage({ cart }) {
-  const [ products, setProducts ] = useState([]);
+  const [products, setProducts] = useState([]);
 
-  // we use useEffect so it run only once not everytime 
   useEffect(() => {
-    axios.get('/api/products')
-      .then((response) => {
+    const getHomeData = async () => {
+      try {
+        const response = await axios.get("/api/products");
         setProducts(response.data);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error fetching products:", error);
-      });
+      }
+    };
+
+    getHomeData();
   }, []);
+
 
   return (
     <>
@@ -26,7 +29,7 @@ function HomePage({ cart }) {
       <Header cart={cart} />
 
       <div className="home-page">
-        <ProductGrid products={products}/>
+        <ProductGrid products={products} />
       </div>
     </>
   );
