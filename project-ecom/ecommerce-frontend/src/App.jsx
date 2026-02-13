@@ -9,7 +9,6 @@ import NotFound from './pages/notfound/NotFound'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [ cart, setCart ] = useState([]);
 
   useEffect(() => {
@@ -26,7 +25,7 @@ function App() {
     <>
       <Routes>
         <Route index element={<HomePage cart={cart}/>}/>
-        <Route path="/checkout" element={<CheckoutPage cart={cart}/>}/>
+        <Route path="/checkout" element={<CheckoutPage cart={cart} setCart={setCart} />}/>
         <Route path="/health" element={<p>200OK</p>}/>
         <Route path="/orders" element={<OrderPage/>}/>
         <Route path="/tracking" element={<TrackingPage/>}/>
