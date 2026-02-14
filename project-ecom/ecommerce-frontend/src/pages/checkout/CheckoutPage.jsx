@@ -11,23 +11,23 @@ function CheckoutPage({ cart, setCart }) {
 
   useEffect(() => {
     const fetchCheckoutData = async () => {
-      let response = axios.get("/api/delivery-options?expand=estimatedDeliveryTime");
+      let response = await axios.get("/api/delivery-options?expand=estimatedDeliveryTime");
       setDeliveryOptions(response.data);
 
-      response = axios.get("/api/payment-summary");
+      response = await axios.get("/api/payment-summary");
       setPaymentSummanry(response.data);
-    }
+    };
 
     fetchCheckoutData();
-
   }, []);
+
 
   return (
     <>
       <title>Checkout</title>
       <link rel="icon" type="image/svg+xml" href="images/cart-favicon.png" />
 
-      <CheckoutHeader />
+      <CheckoutHeader cart={cart}/>
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>

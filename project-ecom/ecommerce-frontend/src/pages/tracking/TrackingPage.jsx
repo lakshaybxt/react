@@ -2,13 +2,13 @@ import Header from '../../components/Header';
 import './TrackingPage.css'
 import '../styles/general.css'
 
-function TrackingPage() {
+function TrackingPage({ cart }) {
   return(
     <>
       <title>Tracking Page</title>
       <link rel="icon" type="image/svg+xml" href="images/tracking-favicon.png" />
 
-        <Header/>
+        <Header cart={cart}/>
 
         <div className="tracking-page">
           <div className="order-tracking">
