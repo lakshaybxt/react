@@ -2,21 +2,8 @@ import DeliveryOptions from "./DeliveryOptions";
 import CartItemDetails from "./CartItemDetails";
 import DeliveryDate from "./DeliveryDate";
 
-function OrderSummary({ cart, setCart, deliveryOptions }) {
+function OrderSummary({ cart, deliveryOptions, loadCart }) {
   
-  function updateDeliveryOption(productId, deliveryOptionId) {
-    setCart((prevCart) =>
-      prevCart.map((item) => {
-        if (item.productId === productId) {
-          return {
-            ...item,
-            deliveryOptionId: deliveryOptionId,
-          };
-        }
-        return item;
-      }),
-    );
-  }
   
   return (
     <>
@@ -32,10 +19,10 @@ function OrderSummary({ cart, setCart, deliveryOptions }) {
 
                 <div className="cart-item-details-grid">
 
-                  <CartItemDetails cartItem={cartItem} />
+                  <CartItemDetails cartItem={cartItem} loadCart={loadCart} />
                   
                   <DeliveryOptions
-                    key={cartItem.productId} carcartItem={cartItem} deliveryOptions={deliveryOptions} updateDeliveryOption={updateDeliveryOption}/>
+                    key={cartItem.productId} cartItem={cartItem} deliveryOptions={deliveryOptions} loadCart={loadCart} />
                 </div>
               </div>
             );
