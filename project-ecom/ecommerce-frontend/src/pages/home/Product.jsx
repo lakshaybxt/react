@@ -4,6 +4,7 @@ import { formatMoney } from "../../utils/money";
 
 function Product({ product, loadCart }) {
   const [quantity, setQantity] = useState(1);
+  const [showAddedMessage, setShowAddedMessage] = useState(false);
 
   const addToCart = async () => {
     console.log("hitting");
@@ -12,6 +13,12 @@ function Product({ product, loadCart }) {
       quantity: quantity,
     });
     await loadCart();
+    
+    setShowAddedMessage(true);
+
+    setTimeout(() => {
+      setShowAddedMessage(false);
+    }, 2000);
   };
 
   const selectQuantity = (e) => {
@@ -57,7 +64,9 @@ function Product({ product, loadCart }) {
 
       <div className="product-spacer"></div>
 
-      <div className="added-to-cart">
+      <div className="added-to-cart"style={{
+        opacity: showAddedMessage ? 1 : 0,
+      }}>
         <img src="images/icons/checkmark.png" />
         Added
       </div>

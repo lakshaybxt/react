@@ -7,18 +7,27 @@ import PaymentSummary from "./PaymentSummary";
 
 function CheckoutPage({ cart, setCart, loadCart }) {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
-  const [paymentSummary, setPaymentSummanry] = useState(null);
+  const [paymentSummary, setPaymentSummary] = useState(null);
 
   useEffect(() => {
     const fetchCheckoutData = async () => {
-      let response = await axios.get("/api/delivery-options?expand=estimatedDeliveryTime");
+      const response = await axios.get(
+        '/api/delivery-options?expand=estimatedDeliveryTime'
+      );
       setDeliveryOptions(response.data);
-
-      response = await axios.get("/api/payment-summary");
-      setPaymentSummanry(response.data);
     };
 
     fetchCheckoutData();
+  }, []);
+
+  useEffect(() => {
+    const fetchPaymentSummary = async () => {
+      const response = await axios.get('/api/payment-summary');
+      setPaymentSummary(response.data);
+    };
+  
+
+    fetchPaymentSummary();
   }, [cart]);
 
 

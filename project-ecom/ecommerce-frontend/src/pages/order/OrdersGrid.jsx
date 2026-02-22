@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { formatMoney } from '../../utils/money';
 import OrderDetailsGrid from './OrderDetailsGrid';
 
-function OrdersGrid({ orders }) {
+function OrdersGrid({ orders, loadCart }) {
   return (
     <div className="orders-grid">
       {orders.map((order) => (
@@ -22,7 +22,7 @@ function OrdersGrid({ orders }) {
             </div>
           </div>
 
-          <OrderDetailsGrid order={order} />
+          <OrderDetailsGrid order={order} loadCart={loadCart} />
         </div>
       ))}
     </div>
